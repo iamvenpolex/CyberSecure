@@ -1,0 +1,505 @@
+/* Global styles */
+body,
+html {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url("/assets/bgImg.png") no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 5%;
+}
+
+.hero-content {
+  max-width: 600px;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.hero-buttons button {
+  padding: 0.8rem 1.5rem;
+  margin-right: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.call-btn {
+  background-color: #f59e0b;
+  color: black;
+  border-radius: 50px;
+  border: none;
+}
+
+.call-btn:hover {
+  background-color: transparent;
+  border: 2px solid orange;
+  color: white;
+}
+
+.assessment-btn {
+  position: absolute;
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  border-radius: 50px;
+  padding: 10px 24px;
+  z-index: 2;
+}
+
+.assessment-btn:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Guide Section */
+.guide-section {
+  background-color: whitesmoke;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.guide-container {
+  background-color: white;
+  display: flex;
+  max-width: 1000px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  flex-wrap: wrap;
+}
+
+.guide-image {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.guide-image img {
+  max-width: 100%;
+  height: 50vh;
+  border-radius: 6px;
+}
+
+.guide-text {
+  flex: 1;
+  min-width: 300px;
+  padding: 40px 30px;
+}
+
+.guide-text h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.guide-text h2 span {
+  color: #000;
+  font-weight: 600;
+}
+
+.guide-text p {
+  color: #555;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.download-btn {
+  background-color: #f59e0b;
+  color: black;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1rem;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+/* How It Works Section */
+.how-it-works {
+  background-color: #0f172a;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.how-it-works h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.steps {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.step {
+  flex: 1;
+  min-width: 250px;
+  max-width: 300px;
+}
+
+.step h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.step p {
+  font-size: 0.95rem;
+  color: #cbd5e1;
+  margin-bottom: 10px;
+}
+
+.how-btn {
+  background-color: #f59e0b;
+  color: black;
+  border: none;
+  padding: 14px 30px;
+  font-size: 1rem;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+/* NIST Section */
+.nist-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.nist-section h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #0a0a0a;
+}
+
+.nist-description {
+  max-width: 600px;
+  margin: 0 auto 40px;
+  font-size: 1rem;
+  color: #555;
+}
+
+.nist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.nist-card {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+  transition: box-shadow 0.3s ease;
+}
+
+.nist-card:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.nist-icon {
+  margin-bottom: 15px;
+}
+
+.learn-btn {
+  margin-top: 10px;
+  background-color: transparent;
+  color: orange;
+  border: 1px solid orange;
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.learn-btn:hover {
+  background-color: orange;
+  color: white;
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  text-align: left;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.modal h3 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: orange;
+}
+
+.modal p {
+  margin: 15px 0;
+  color: #333;
+}
+
+.modal button {
+  background-color: orange;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Audit Section */
+.audit-section {
+  background-color: #0f172a;
+  color: white;
+  padding: 80px 20px;
+}
+
+.audit-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.audit-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.audit-text h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.audit-text h2 span {
+  color: #d1d5db;
+  font-weight: 600;
+}
+
+.audit-text p {
+  font-size: 1rem;
+  color: #cbd5e1;
+  margin-bottom: 30px;
+}
+
+.audit-columns {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.audit-column {
+  flex: 1;
+  min-width: 220px;
+}
+
+.audit-column h4 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.audit-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+}
+
+.audit-column li {
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+  color: #f8fafc;
+}
+
+.audit-column li:has(span.cross) {
+  text-decoration: line-through;
+  color: #94a3b8;
+}
+
+.audit-btn {
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.audit-btn.filled {
+  background-color: #f59e0b;
+  color: black;
+  border: none;
+}
+
+.audit-btn.outlined {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.audit-image {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+.audit-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+}
+
+.sample-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #facc15;
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .overlay {
+    justify-content: center;
+    padding-left: 0;
+  }
+
+  .hero-content {
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .guide-container {
+    flex-direction: column;
+  }
+
+  .guide-text {
+    text-align: center;
+  }
+
+  .steps {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .audit-container {
+    flex-direction: column;
+  }
+
+  .audit-columns {
+    flex-direction: column;
+  }
+
+  .audit-image img {
+    max-width: 100%;
+  }
+}
+
+/* call to action section */
+
+.cta-section {
+  background-color: #f3f3f3;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.cta-heading {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+}
+
+.cta-subtext {
+  color: #4a4a4a;
+  margin-bottom: 1.5rem;
+}
+
+.cta-button {
+  background-color: #f59e0b;
+  color: white;
+  font-weight: 600;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #ea580c;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .cta-heading {
+    font-size: 2rem;
+  }
+
+  .cta-button {
+    padding: 0.75rem 2rem;
+  }
+}
